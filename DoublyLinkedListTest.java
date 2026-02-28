@@ -30,9 +30,15 @@ public class DoublyLinkedListTest {
 	
 	public static void testPrintEmptyListForward() {
 		//TODO
+		System.out.println("testPrintEmptyListForward");
+		List<String> l = new DoublyLinkedList<String>();
+		l.print();
 	}
 	public static void testPrintEmptyListBackward() {
 		//TODO
+		System.out.println("testPrintEmptyListBackward");
+		List<String> l = new DoublyLinkedList<String>();
+		l.printBackwards();
 	}
 	
 	public static void testEmptyGet() {
@@ -275,8 +281,10 @@ public class DoublyLinkedListTest {
 		list.addLast("Banana");
 
 		//TODO	
-                // ADD code to obtain iterator object, then uses it to iterate through the list and print its data.
-		
+                // ADD code to aobtain iterator object, then uses it to iterate through the list and print its data.
+		for(String item :list){
+			System.out.print(item+" ");
+		}
 		System.out.println("-------------- testIterator  ------------:");
 	}
 

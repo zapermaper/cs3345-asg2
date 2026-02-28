@@ -1,4 +1,4 @@
-public interface List<T>
+public interface List<T> extends Iterable<T>
 {
 	/**
 	 * Adds item to the end of a list

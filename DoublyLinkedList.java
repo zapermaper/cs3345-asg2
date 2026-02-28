@@ -1,3 +1,5 @@
+import java.util.Iterator;
+
 public class DoublyLinkedList<T> implements List<T>,Iterable<T> {
 	private Node head, tail;
 	private int numberOfElements;
@@ -137,12 +139,16 @@ public class DoublyLinkedList<T> implements List<T>,Iterable<T> {
 		}
 	}
 
-private Node curr=head;
-@Overide 
-public boolean hasNext(){
-	return current !=null;
-}
-	@Override
+private class DoublyLinkedListIterator implements Iterator<T> {
+
+    private Node current = head;
+
+    @Override
+    public boolean hasNext() {
+        return current != null;
+    }
+
+    @Override
     public T next() {
         T data = current.data;
         current = current.next;
@@ -153,5 +159,6 @@ public boolean hasNext(){
     public void remove() {
         throw new UnsupportedOperationException();
     }
+}
 }
 
