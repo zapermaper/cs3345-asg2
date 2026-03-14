@@ -1,4 +1,4 @@
-public interface List<T> extends Iterable<T>
+public interface List<T>
 {
 	/**
 	 * Adds item to the end of a list
@@ -55,5 +55,3 @@ public interface List<T> extends Iterable<T>
 	 */
 	public int getLength();
 }
-
-
